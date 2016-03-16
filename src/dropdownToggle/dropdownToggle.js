@@ -100,7 +100,7 @@ angular.module('mm.foundation.dropdownToggle', [ 'mm.foundation.position', 'mm.f
         dropdown.css('display', 'none');
       }
 
-      scope.$watch('$location.path', function() { closeMenu(); });
+      scope.$on('routeChangeStart', function() { closeMenu(); });
 
       element.on('click', onClick);
       element.on('$destroy', function() {
