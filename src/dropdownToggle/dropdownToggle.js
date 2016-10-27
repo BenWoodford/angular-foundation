@@ -92,6 +92,8 @@ angular.module('mm.foundation.dropdownToggle', [ 'mm.foundation.position', 'mm.f
               parent.removeClass('hover');
             }
           };
+          
+          scope.$close = closeMenu;
           $document.on('click', closeMenu);
         }
       };
